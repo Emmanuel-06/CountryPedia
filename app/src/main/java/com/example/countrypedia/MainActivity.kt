@@ -12,7 +12,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.countrypedia.light.lightnav.LightNav
+import androidx.core.graphics.alpha
+import com.example.countrypedia.navigation.CountryNavigation
 import com.example.countrypedia.ui.theme.CountrypediaTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,22 +22,16 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        enableEdgeToEdge(statusBarStyle = SystemBarStyle.light(Color.CYAN, Color.BLUE))
+        enableEdgeToEdge()
 
         setContent {
             CountrypediaTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    LightNav()
+
 //                    Compps()
-//                   CountryNavigation()
+                CountryNavigation()
 //                    val navController = rememberNavController()
 //
 //                    DetailsScreen(popBackStack = { navController.popBackStack() })
-                }
             }
         }
     }

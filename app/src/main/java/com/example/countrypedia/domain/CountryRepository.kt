@@ -15,7 +15,7 @@ class CountryRepository @Inject constructor(
             NetworkResponse.Success(response)
 
         } catch (e: Exception){
-            Log.d("EROR", "${e.message}")
+            Log.d("ERROR", "${e.message}")
             NetworkResponse.Error("An error occured: ${e.message}")
         }
     }
