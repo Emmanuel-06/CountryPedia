@@ -23,15 +23,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         enableEdgeToEdge()
-
         setContent {
             CountrypediaTheme {
-
-//                    Compps()
                 CountryNavigation()
-//                    val navController = rememberNavController()
-//
-//                    DetailsScreen(popBackStack = { navController.popBackStack() })
             }
         }
     }
